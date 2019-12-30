@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:flutter_test_project/layout_widgets_test.dart';
 
 void main() => runApp(MyApp());
 
@@ -20,7 +21,13 @@ class MyApp extends StatelessWidget {
         // is not restarted.
         primarySwatch: Colors.blue,
       ),
-      home: MyHomePage(title: 'Flutter Demo Home Page'),
+      home: Scaffold(
+        appBar: AppBar(title: Text("Flutter Test Project"),),
+        body: Container(
+          margin: EdgeInsets.all(16),
+          child: new LayoutWidgets(),
+        )
+      ),
     );
   }
 }
